@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Made by Loki123
-# For that idiot who can't use FFMPEG
+# Created to help with FFMPEG screencast
+# Using xwininfo to locate window and record it
+# The recording will NOT follow the window
+# Just locates the window and records the position it is in
+
 
 uppl=$(xwininfo -frame) 
 win_size=$(echo $uppl | grep -oEe '-geometry [0-9]+x[0-9]+' | grep -oEe '[0-9]+x[0-9]+')
